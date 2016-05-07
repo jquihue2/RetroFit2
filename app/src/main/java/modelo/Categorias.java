@@ -1,10 +1,21 @@
 package modelo;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
 /**
  * Created by xcode on 5/7/16.
  */
+
+@DatabaseTable
 public class Categorias {
+
+    protected static final String ID_CATEGORIA="_id_categoria";
+    protected static final String NOMBRE_CATEGORIA="nombre_categoria";
+
+    @DatabaseField(generatedId = true,columnName = ID_CATEGORIA)
     private String id_categoria;
+    @DatabaseField(generatedId = true,columnName = NOMBRE_CATEGORIA)
     private String nombre;
 
     public String getId_categoria() {
